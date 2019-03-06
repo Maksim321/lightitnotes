@@ -1,0 +1,25 @@
+<mat-card class="note-card" [ngStyle]="{'background-color':note.noteColor}">
+  <mat-card-header>
+    <mat-card-subtitle>{{note.noteHead}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="note-bodyText">
+  	{{note.noteBody}}
+  </mat-card-content>
+  <mat-chip-list class="note-labels-container">
+    <mat-chip *ngFor="let label of note.labels"
+              (click)="observables.getNotesLabels(authService.getUserUID, label)"
+              class="labels-container__label"
+              [style.backgroundColor]="label.color"
+              (removed)="deleteLabel(label)">
+      {{label.name}} <mat-icon matChipRemove>cancel</mat-icon>
+    </mat-chip>
+  </mat-chip-list>  
+  <mat-card-actions class="note-inputs">
+    <button mat-icon-button (click)="editNote()">
+      <mat-icon aria-label="delete-icon">settings</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon aria-label="delete-icon" (click)="deleteNote()">delete</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

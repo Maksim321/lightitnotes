@@ -1,0 +1,78 @@
+.auth-card__wrap{
+  max-width: 450px;
+  height: 100%;
+  padding-top: 200px;
+  margin: 0 auto;
+}
+
+.auth-card {
+  max-width: 450px;
+  margin: 0 20px;
+  &__title{
+  	font-size: 18px;
+  }
+
+  &__actions{
+  	margin: 0 0 5px 0;
+  }
+
+  .auth-form__row{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:100px) {
+  .auth-card {
+    auth-card__content{
+      .auth-card__form{
+        .auth-form__row{
+          .form-button{
+            padding: 0 5px;
+            margin: 0 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:600px) {
+  .auth-card {
+    .auth-form__row{
+      .form-button{
+        padding: 0 10px;
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+@media screen and (min-height:100px) {
+  .auth-card__wrap{
+    padding-top: 30px;
+  }
+}
+
+@media screen and (min-height:600px) {
+  .auth-card__wrap{
+    padding-top: 150px;
+  }
+}
+
+@media screen and (min-height:800px) {
+  .auth-card__wrap{
+    padding-top: 200px;
+  }
+}
+
+@media screen and (min-height:1000px) {
+  .auth-card__wrap{
+    padding-top: 250px;
+  }
+}
+
+@media screen and (min-height:1200px) {
+  .auth-card__wrap{
+    padding-top: 300px;
+  }
+}

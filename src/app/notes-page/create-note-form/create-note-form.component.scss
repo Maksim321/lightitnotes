@@ -1,0 +1,93 @@
+$White: #FFFFFF;
+$Red: #EF9A9A;
+$Blue: #64B5F6;
+$Green: #9CCC65;
+$Yellow: #FFEE58;
+$Brown: #8D6E63;
+
+.note-card-wrap{
+  .note-card {
+    max-width: 550px;
+    height: 13px;
+    margin: 15px auto 40px;
+    transition: .3s;
+    overflow: hidden;
+    box-sizing: content-box;
+    box-shadow: 0 1px 9px 3px rgba(60,64,67,0.30);
+  }
+
+  .note-card_active {
+    height: 310px;
+    .note-form{
+      transform:translateY(0px);
+    }
+  }
+}
+
+.note-form{
+  transition:.3s;
+  transform:translateY(-73px);
+}
+
+.note-form__row{
+  width: 100%;
+  margin: 0;
+  .radio-button{
+    margin: 0 5px;
+  }
+}
+.note-form__row-wrap{
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  background: #e4e4e4;
+}
+.note-form__row-flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin color-radio($Color) {
+  &.mat-accent {
+    .mat-radio-inner-circle {
+      background-color: $Color;
+    }
+    .mat-radio-outer-circle{
+	  border-color: $Color;
+    }
+    &.mat-radio-checked {
+  	  .mat-radio-outer-circle {
+        border-color: $Color;
+      }
+    }
+    &.mat-radio-ripple {
+  	  .mat-ripple-element {
+        background-color:$Color;
+      }
+    }
+  }
+}
+
+::ng-deep .radio-button_white{
+  @include color-radio($White);
+}
+
+::ng-deep .radio-button_red{
+  @include color-radio($Red);
+}
+
+::ng-deep .radio-button_blue{
+  @include color-radio($Blue);
+}
+
+::ng-deep .radio-button_green{
+  @include color-radio($Green);
+}
+
+::ng-deep .radio-button_yellow{
+  @include color-radio($Yellow);
+}
+
+::ng-deep .radio-button_brown{
+  @include color-radio($Brown);
+}

@@ -1,0 +1,23 @@
+<div class="note-card-wrap">
+<mat-card class="note-card"
+          [ngStyle]="{'background-color': noteFormService.getForm.value.noteColor}"
+          [ngClass]="{'note-card_active':noteFormService.isActive }">
+  <mat-card-content>
+    <form class="note-form" [formGroup]="noteFormService.noteForm" (ngSubmit)="sendNote()">
+      <app-note-head-input [parentGroup]="noteFormService.noteForm" ></app-note-head-input>
+      <app-note-body-input (click)="noteFormService.isActive=true" [parentGroup]="noteFormService.noteForm" ></app-note-body-input>
+      <app-note-categories-input [parentGroup]="noteFormService.noteForm" [categories$]="observables.getCategories$"></app-note-categories-input>
+      <app-note-colors-input [parentGroup]="noteFormService.noteForm"></app-note-colors-input>
+      <app-note-labels-input [parentGroup]="noteFormService.noteForm" [labels$]="observables.getLabels$"></app-note-labels-input>
+      <mat-card-actions class="note-form__row note-form__row-flex">
+        <button mat-raised-button 
+                color="primary"
+                type="submit" 
+                [disabled]="!noteFormService.getForm.valid">{{noteFormService.getEditStatus?'Обновить':'Добавить'}}</button>
+        <a mat-button (click)="closedForm()">Отмена</a>
+      </mat-card-actions>
+   </form>
+   <mat-progress-bar [style.display]="showSpinner ? 'block' : 'none'" mode="indeterminate"></mat-progress-bar>
+  </mat-card-content>
+</mat-card>
+</div>

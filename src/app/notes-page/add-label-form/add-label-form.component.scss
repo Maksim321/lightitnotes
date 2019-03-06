@@ -1,0 +1,13 @@
+.label-form-container{
+  padding: 5px;
+
+  .label-form{
+  	 text-align: center;
+    &__colors-wrap{
+      padding: 5px;
+      border-radius: 5px;
+      text-align: center;
+      background: #e4e4e4;
+    }
+  }
+}

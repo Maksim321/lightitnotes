@@ -1,0 +1,16 @@
+<header>
+  <mat-toolbar color="primary" class="header">
+    <a class="header__logo-link" routerLink="/">
+      <mat-icon class="header__icon">event_note</mat-icon>
+      <span class="header__logo-text">Notes</span>
+    </a>
+    <div class="flex-space"></div>
+    <a mat-icon-button *ngIf="authService.authenticated" class="header__exit-link" (click)="trySignOut()">
+      <mat-icon class="header__icon">exit_to_app</mat-icon>
+    </a> 
+    <a mat-icon-button class="header__git-link" href="https://github.com/Maksim321/lightitnotes">
+      <img class="header__git-img" src="../../assets/git-icon.svg">
+      <span class="header__git-text">GitHub</span>
+    </a>
+  </mat-toolbar>
+</header>

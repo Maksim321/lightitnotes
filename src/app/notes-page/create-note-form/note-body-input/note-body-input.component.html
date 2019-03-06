@@ -1,0 +1,13 @@
+<mat-form-field [formGroup]="parentGroup" class="note-form__row">
+  <textarea matInput (click)="isActive=true" #noteBody
+            placeholder="Заметка..." 
+            formControlName="noteBody"
+            maxlength="300" 
+            name="noteBody"
+            cdkTextareaAutosize
+            [ngStyle]="{'box-sizing': 'content-box'}"
+            #autosize="cdkTextareaAutosize"
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="25" required></textarea>
+  <mat-hint align="end">{{noteBody.value?.length || 0}}/600</mat-hint>
+</mat-form-field>

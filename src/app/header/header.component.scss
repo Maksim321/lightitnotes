@@ -1,0 +1,42 @@
+.header{
+  padding: 20px 20px;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 
+              0 4px 5px 0 rgba(0, 0, 0, .14), 
+              0 1px 10px 0 rgba(0, 0, 0, .12);
+  .header__logo-link{
+    text-decoration: none;
+    color: #fff;
+    .header__logo-text{
+      margin-left: 10px;
+      font-weight: 600;
+      font-size: 24px;
+    }
+  }
+
+  .flex-space{
+    margin-left: auto;
+  }
+  .header__icon{
+    font-size: 32px;
+  }
+
+  .header__git-link{
+    margin-right: 45px;
+    .header__git-text{
+      margin-left: 5px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+	  .header__git-img{
+	    height: 30px;
+	  }
+  }
+  .header__exit-link{
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,36 @@
+<div class="auth-card__wrap">
+  <mat-card class="auth-card">
+    <mat-card-header class="auth-card__header">
+      <mat-card-title class="auth-card__title">Авторизация</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="auth-card__content" >
+      <form class="auth-card__form" [formGroup]="authForm" (ngSubmit)="tryRegister()">
+        <mat-form-field class="auth-form__row">
+          <input matInput placeholder="Enter your email" formControlName="email" name="email" [errorStateMatcher]="matcher" required>     
+        </mat-form-field>
+        <mat-form-field class="auth-form__row">
+          <input matInput placeholder="Enter your password" [type]="hidePass ? 'password' : 'text'" formControlName="password" required>
+          <mat-icon matSuffix (click)="hidePass = !hidePass">{{hidePass ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </mat-form-field>      
+        <mat-card-actions class="auth-form__row auth-card__actions">
+          <a mat-raised-button 
+                  color="primary"
+                  class="form-button" 
+                  (click)="tryLogin()"
+                  [disabled]="!authForm.valid">Войти</a>
+          <button mat-raised-button 
+                  color="primary"
+                  class="form-button" 
+                  type="submit" 
+                  [disabled]="!authForm.valid">Регистрация</button>
+          <button mat-raised-button color="warn" 
+                  [ngStyle]="{'float':'right'}"
+                  type="button"
+                  class="form-button"  
+                  (click) = "tryGoogleLogin()">Google</button>
+        </mat-card-actions>
+      </form>
+      <mat-progress-bar [style.display]="showSpinner ? 'block' : 'none'" mode="indeterminate"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
+</div>

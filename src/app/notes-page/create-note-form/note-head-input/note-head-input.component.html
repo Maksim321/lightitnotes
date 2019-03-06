@@ -1,0 +1,8 @@
+<mat-form-field [formGroup]="parentGroup" class="note-form__row">
+  <input matInput 
+         placeholder="Заголовок" 
+         formControlName="noteHead" 
+         name="noteHead"
+         maxlength="60" 
+         [errorStateMatcher]="matcher">     
+</mat-form-field>

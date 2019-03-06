@@ -1,0 +1,11 @@
+<div class="labels-container-wrap">
+  <mat-chip-list class="labels-container">
+    <mat-chip *ngFor="let label of observables.getLabels$ | async" 
+    		  [style.backgroundColor]="label.color"
+    		  class="labels-container__label" 
+    		  (click)="observables.getNotesLabels(authService.getUserUID, label)"
+    		  (removed)="removeLabel(label)">
+      {{label.name}} <mat-icon matChipRemove>cancel</mat-icon>
+    </mat-chip>
+  </mat-chip-list>
+</div>

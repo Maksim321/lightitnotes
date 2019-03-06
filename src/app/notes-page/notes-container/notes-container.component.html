@@ -1,0 +1,8 @@
+<section class="notes-section">
+  <div class="create-notes-container">
+    <app-create-note-form></app-create-note-form>
+  </div>
+  <div class="grid-notes-container">
+    <app-note-container *ngFor="let note of observables.getNotes$ | async" [note]="note"></app-note-container>
+  </div>
+</section>

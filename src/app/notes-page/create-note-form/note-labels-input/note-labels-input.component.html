@@ -1,0 +1,5 @@
+<mat-form-field [formGroup]="parentGroup" class="note-form__row">
+  <mat-select placeholder="Ярлыки" formControlName="labels" multiple>
+    <mat-option *ngFor="let label of labels$ | async" [value]=label>{{label.name}}</mat-option>
+  </mat-select>
+</mat-form-field>

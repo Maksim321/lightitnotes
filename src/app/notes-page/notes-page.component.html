@@ -1,0 +1,11 @@
+<mat-drawer-container class="notes-page-container">
+  <mat-drawer #drawer [mode]="screenWidth<600 ? 'Over':'side'" class="notes-page__menu" opened>
+  	<app-menu></app-menu>
+  </mat-drawer>
+  <mat-drawer-content class="notes-page__notecontainer">
+    <button mat-icon-button color="primary">
+      <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+    </button>
+  	<app-notes-container></app-notes-container>
+  </mat-drawer-content>
+</mat-drawer-container>

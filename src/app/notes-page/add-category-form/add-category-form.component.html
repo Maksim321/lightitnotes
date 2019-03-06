@@ -1,0 +1,8 @@
+<div class="add-form-container">
+  <mat-form-field class="add-form-text">
+    <input #newCategoryName matInput maxlength="20" name="category" placeholder="Название категории" value="">   
+  </mat-form-field>
+  <a mat-icon-button color="primary" class="add-form-button" (click)="addCategory(newCategoryName.value)">
+    <mat-icon aria-label="add-category">add</mat-icon>
+  </a>
+</div>
