@@ -12,6 +12,7 @@ import { Colors } from '../colors';
 export class LabelsContainerComponent implements OnInit {
 
   colors = new Colors();
+  
 
   constructor(private apiService: ApiService,
   			  private authService: AuthService,
@@ -21,7 +22,6 @@ export class LabelsContainerComponent implements OnInit {
   }
 
   removeLabel(label){
-  	console.log(label);
   	this.apiService.deleteLabel(this.authService.getUserUID, label.uidLabel)
   }
 }
