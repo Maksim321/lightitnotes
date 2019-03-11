@@ -79,9 +79,19 @@ export class ApiService {
     return this.afStore.collection<User>(`/User/${uidUser}/Labels`).doc(uidLabel).delete();
   }
 
-   deleteLabelFromNote(uidUser:string, uidNote:string, labels:Label[]){
+  deleteCategory(uidUser:string, uidCategory:string){
+    return this.afStore.collection<User>(`/User/${uidUser}/Categories`).doc(uidCategory).delete();
+  }
+
+  deleteLabelFromNote(uidUser:string, uidNote:string, labels:Label[]){
     return this.afStore.collection<User>(`/User/${uidUser}/Notes/`).doc(uidNote).update({
       labels: labels
     });
-  } 
+  }  
+
+  deleteCategoryFromNote(uidUser:string, uidNote:string, uidCategories:string[]){
+    return this.afStore.collection<User>(`/User/${uidUser}/Notes/`).doc(uidNote).update({
+      uidCategories: uidCategories
+    });
+  }  
 }

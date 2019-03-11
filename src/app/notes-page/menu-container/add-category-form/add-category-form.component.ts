@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ApiService, AuthService, MessageService, ObservablesService } from "../../core";
-import { Category } from "../../core";
+import { ApiService, AuthService, MessageService, ObservablesService } from "../../../core";
+import { Category } from "../../../core";
 
 @Component({
   selector: 'app-add-category-form',

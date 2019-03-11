@@ -8,6 +8,7 @@
       <app-note-body-input (click)="noteFormService.isActive=true" [parentGroup]="noteFormService.noteForm" ></app-note-body-input>
       <app-note-categories-input [parentGroup]="noteFormService.noteForm" [categories$]="observables.getCategories$"></app-note-categories-input>
       <app-note-colors-input [parentGroup]="noteFormService.noteForm"></app-note-colors-input>
+      <app-note-labels-container [labels]="noteFormService.getValueForm.labels"></app-note-labels-container>      
       <app-note-labels-input [parentGroup]="noteFormService.noteForm" [labels$]="observables.getLabels$"></app-note-labels-input>
       <mat-card-actions class="note-form__row note-form__row-flex">
         <button mat-raised-button 

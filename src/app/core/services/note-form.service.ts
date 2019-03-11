@@ -13,7 +13,7 @@ export class NoteFormService {
   	noteHead: new FormControl(''),
   	noteBody: new FormControl('', [Validators.required]),
   	noteColor: new FormControl('', [Validators.required]),
-  	uidCategories: new FormControl('', [Validators.required]),
+  	uidCategories: new FormControl(''),
     labels: new FormControl('')
   });
 

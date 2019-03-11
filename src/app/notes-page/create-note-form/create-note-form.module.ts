@@ -9,6 +9,7 @@ import { NoteBodyInputComponent } from './note-body-input/note-body-input.compon
 import { NoteCategoriesInputComponent } from './note-categories-input/note-categories-input.component';
 import { NoteColorsInputComponent } from './note-colors-input/note-colors-input.component';
 import { NoteLabelsInputComponent } from './note-labels-input/note-labels-input.component';
+import { NoteLabelsContainerComponent } from './note-labels-container/note-labels-container.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { NoteLabelsInputComponent } from './note-labels-input/note-labels-input.
     NoteBodyInputComponent,
     NoteCategoriesInputComponent,
     NoteColorsInputComponent,
-    NoteLabelsInputComponent
+    NoteLabelsInputComponent,
+    NoteLabelsContainerComponent
   ],
   providers: [],
   exports: [CreateNoteFormComponent]

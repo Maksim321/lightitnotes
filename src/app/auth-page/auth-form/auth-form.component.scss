@@ -21,27 +21,16 @@
   }
 }
 
-@media screen and (min-width:100px) {
+@media screen and (max-width:400px) {
   .auth-card {
-    auth-card__content{
+    .auth-card__content{
       .auth-card__form{
         .auth-form__row{
           .form-button{
             padding: 0 5px;
-            margin: 0 3px;
+            margin: 0 4px;
           }
         }
-      }
-    }
-  }
-}
-
-@media screen and (min-width:600px) {
-  .auth-card {
-    .auth-form__row{
-      .form-button{
-        padding: 0 10px;
-        margin: 0 5px;
       }
     }
   }

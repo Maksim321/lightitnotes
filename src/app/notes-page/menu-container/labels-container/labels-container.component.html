@@ -4,7 +4,7 @@
     		  [style.backgroundColor]="label.color"
     		  class="labels-container__label" 
     		  (click)="observables.getNotesLabels(authService.getUserUID, label)"
-    		  (removed)="removeLabel(label)">
+    		  (removed)="deleteLabel(label)">
       {{label.name}} <mat-icon matChipRemove>cancel</mat-icon>
     </mat-chip>
   </mat-chip-list>

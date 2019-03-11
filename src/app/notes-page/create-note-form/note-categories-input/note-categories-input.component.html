@@ -1,5 +1,5 @@
 <mat-form-field [formGroup]="parentGroup" class="note-form__row">
-  <mat-select placeholder="Категории" formControlName="uidCategories" multiple required>
-    <mat-option *ngFor="let ctegory of categories$ | async" [value]=ctegory.uidCategory>{{ctegory.name}}</mat-option>
+  <mat-select placeholder="Категории" formControlName="uidCategories" multiple>
+    <mat-option *ngFor="let ctegory of categories$ | async" [value]="ctegory.uidCategory">{{ctegory.name}}</mat-option>
   </mat-select>
 </mat-form-field>

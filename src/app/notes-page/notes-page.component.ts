@@ -11,7 +11,7 @@ export class NotesPageComponent implements OnInit  {
   screenHeight:any;
   screenWidth:any;
   constructor(private authService: AuthService,
-  			  private observables: ObservablesService) { 
+  			      private observables: ObservablesService) { 
   	this.getScreenSize();
   }
 

@@ -1,0 +1,30 @@
+<div class="menu-container">
+  <div class="menu-container__add-form">
+    <app-add-category-form></app-add-category-form>
+  </div>
+  <mat-action-list class="menu-container__link-list">
+    <a mat-list-item 
+        (click)="selectAllCategory()"
+        [class.selected]="selectedCategory === ''"
+        class="menu-container__link">
+        <mat-icon class="menu-container__icon">label_important</mat-icon>
+        Все заметки
+    </a>
+    <div class="menu-container__link-container"
+          *ngFor="let category of observables.getCategories$ | async" >
+      <a mat-list-item 
+    	   (click)="selectCategory(category.uidCategory)"
+    	   [class.selected]="category.uidCategory == selectedCategory"
+    	   class="menu-container__link">
+        <mat-icon class="menu-container__icon">label_important</mat-icon>
+    		{{category.name}} 
+      </a>
+      <mat-icon class="menu-container__icon-delete" (click)="deleteCategory(category.uidCategory)">cancel</mat-icon>
+    </div>
+  </mat-action-list>
+  <div class="menu-container__add-label">
+    <app-add-label-form></app-add-label-form>
+    <app-labels-container></app-labels-container>
+  </div>
+
+</div>

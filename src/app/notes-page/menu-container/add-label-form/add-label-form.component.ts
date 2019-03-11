@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ApiService, AuthService, MessageService, ObservablesService } from "../../core";
-import { Colors } from '../colors';
-import { Label } from "../../core";
+import { ApiService, AuthService, MessageService, ObservablesService } from "../../../core";
+import { Colors } from '../../colors';
+import { Label } from "../../../core";
 
 @Component({
   selector: 'app-add-label-form',

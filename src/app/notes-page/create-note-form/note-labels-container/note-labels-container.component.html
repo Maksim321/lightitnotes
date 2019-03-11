@@ -1,0 +1,8 @@
+<div class="note-form__row">
+  <mat-chip-list class="labels-container">
+    <mat-chip *ngFor="let label of labels"
+              class="labels-container__label"
+              [style.backgroundColor]="label.color">{{label.name}}
+    </mat-chip>
+  </mat-chip-list>
+</div>

@@ -7,7 +7,6 @@ import { Category, Note, Label } from '../models';
 @Injectable()
 export class ObservablesService {
 
-  private categoryUID:string;
   private categories$:Observable<Category[]>;
   private notes$:Observable<Note[]>;
   private labels$:Observable<Label[]>;
@@ -25,14 +24,6 @@ export class ObservablesService {
   get getLabels$():Observable<Label[]> {
     return this.labels$;
   }    
-
-  get getCategoryUid():string {
-    return this.categoryUID;
-  }
-
-  set setCategoryUid(value: string) {
-	  this.categoryUID = value;
-  }
 
   getCategories(uidUser:string){
     this.categories$ = this.apiService.getCategories(uidUser);   
