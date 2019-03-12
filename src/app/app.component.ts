@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService} from "./core";
+
 
 @Component({
   selector: 'app-root',
@@ -6,8 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  constructor(){};
+  constructor(private authService: AuthService,
+  			  private router: Router){};
 
   ngOnInit() {
+  	this.authService.currentUserObservable.subscribe((auth)=> {
+  	  if(auth){
+  	  	this.authService.authState = auth;
+        this.router.navigate(["notes"]);
+  	  }
+  	});  	
   }
 }

@@ -10,16 +10,7 @@ export class AuthService {
 
   authState: firebase.User = null;
 
-  constructor(public afAuth: AngularFireAuth,
-              private router: Router,
-              private apiService: ApiService) {
-
-  	this.afAuth.authState.subscribe((auth)=> {
-  	  if(auth){
-  	  	this.authState = auth;
-        this.router.navigate(["notes"]);
-  	  }
-  	});
+  constructor(public afAuth: AngularFireAuth) {
   }
 
   get authenticated(): boolean {
